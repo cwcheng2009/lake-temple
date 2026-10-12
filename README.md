@@ -53,16 +53,25 @@ You can add other models (a boat, more trees, statues) the same way later; ask C
 
 The synthesised layers live in [`src/audio/soundscape.js`](src/audio/soundscape.js). To use real recordings (field recordings of water or a real temple bell, for example), put `.mp3` files in `public/audio/` and ask Claude to swap a layer to play the file at the same 3D position.
 
-## Put it online with GitHub Pages
+## Online (GitHub Pages)
 
-This only needs to be set up once. After that, every change you push goes live in about a minute.
+- **Live site:** https://cwcheng2009.github.io/lake-temple/
+- **Code:** https://github.com/cwcheng2009/lake-temple (public; GitHub account `cwcheng2009`)
+- My other site, [maple-lake](https://cwcheng2009.github.io/maple-lake/), is a separate repository and is not affected by this one.
 
-1. Create a free account at [github.com](https://github.com) and install [GitHub Desktop](https://desktop.github.com).
-2. In GitHub Desktop: **File → Add Local Repository →** choose this folder. When it says it isn't a repository yet, click **create a repository**.
-3. Click **Publish repository**. Untick "Keep this code private" if you want the code public. (Pages on a free account requires a public repository.)
-4. On github.com, open the repository → **Settings → Pages →** under *Build and deployment*, set **Source** to **GitHub Actions**.
-5. Back in GitHub Desktop, make any small change, then **Commit** and **Push**. The workflow in `.github/workflows/deploy.yml` builds the site and publishes it.
-6. The site address appears in **Settings → Pages**. It looks like `https://YOUR-NAME.github.io/REPO-NAME/`.
+This is already set up (October 2026). Publishing uses the `gh` command-line tool (installed with Homebrew and logged in), not GitHub Desktop.
+
+**To publish a change:** ask Claude (in the Code tab) to "push it online". Claude commits the change and pushes it to `main`. The workflow in `.github/workflows/deploy.yml` then builds the site, and it is live in about 30 seconds.
+
+To do it yourself in the terminal:
+
+```bash
+git add -A && git commit -m "Describe the change" && git push
+```
+
+Size limits: each Pages site can be up to 1 GB, with about 100 GB of traffic a month; a single file can't be over 100 MB. This site is about 1 MB. Keep a Tripo3D model under ~20 MB so the page loads quickly.
+
+The local folder (`Desktop/udemy touch designer/Lake Tempo 3D Soundscape`) and GitHub are two separate copies. They only match after a push. GitHub also acts as a backup.
 
 ## Project layout
 
