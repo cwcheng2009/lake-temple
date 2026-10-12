@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lake Temple · 湖畔古寺</title>
+    <meta name="description" content="A 3D soundscape: a temple by a lake at night. Best with headphones." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b1424'/%3E%3Cpath d='M5 12h22l-2 3H7z' fill='%23d8b06a'/%3E%3Cpath d='M9 15v11M23 15v11M7 19h18' stroke='%23c0392b' stroke-width='2.5'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <canvas id="scene"></canvas>
+
+    <section id="intro">
+      <div class="card">
+        <p class="eyebrow">A 3D soundscape</p>
+        <h1>Lake Temple<span>湖畔古寺</span></h1>
+        <p class="sub">Night by the water. Wind chimes, crickets, a distant bell.<br />Best with headphones.</p>
+        <button id="enter" type="button">Enter with sound</button>
+      </div>
+    </section>
+
+    <div id="hud">
+      <div id="title">Lake Temple <span>湖畔古寺</span></div>
+      <p id="hint">Drag to look around · Scroll to move closer · Click the bell, lanterns, hall or water</p>
+      <div id="controls">
+        <button id="mute" type="button" aria-pressed="true">Sound on</button>
+        <button id="mixToggle" type="button">Mixer</button>
+      </div>
+      <div id="mixer">
+        <div id="mixRows"></div>
+        <p class="keys"><kbd>B</kbd> bell · <kbd>M</kbd> mute · <kbd>H</kbd> hide interface</p>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
